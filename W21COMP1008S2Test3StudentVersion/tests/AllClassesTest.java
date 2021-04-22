@@ -300,10 +300,10 @@ class AllClassesTest {
     /***************************************************************************
      * all the tests that start with "setSki" are Skis tests                   *
      ***************************************************************************/
-//    @Test
-//    void setSkiSuperClass(){
-//        assertTrue(skis1 instanceof InventoryItem);
-//    }
+    @Test
+    void setSkiSuperClass(){
+        assertTrue(skis1 instanceof InventoryItem);
+    }
 
     @Test
     void setSkiBrandRossignolConstructor() {
