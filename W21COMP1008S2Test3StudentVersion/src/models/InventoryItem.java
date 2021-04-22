@@ -1,3 +1,7 @@
+/**
+ * Author: Dmitrii Demin
+ * Id: 200464709
+ */
 package models;
 
 public abstract class InventoryItem {
