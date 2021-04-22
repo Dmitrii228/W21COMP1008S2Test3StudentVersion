@@ -40,107 +40,107 @@ class AllClassesTest {
      * Uncomment these lines of code once you connect the TennisRacquet class to
      * the InventoryItem class
      *************************************************************************/
-//    @Test
-//    void setTRSuperClass() {
-//        assertTrue(tennisRacquet1 instanceof InventoryItem);
-//    }
-//
-//    @Test
-//    void setIIQuantityInStockConstructor() {
-//        assertEquals(20, tennisRacquet1.getQuantityInStock());
-//    }
-//
-//    @Test
-//    void setIIQuantityInStock() {
-//        tennisRacquet1.setQuantityInStock(30);
-//        assertEquals(30, tennisRacquet1.getQuantityInStock());
-//    }
-//
-//    @Test
-//    void setIIQuantityInStockInvalidLowConstructor() {
-//        assertThrows(IllegalArgumentException.class, ()->
-//                new TennisRacquet("Head","Challenge Lite",239,"midsize",21.87,89.99,-1));
-//    }
-//
-//    @Test
-//    void setIIQuantityInStockInvalidLow() {
-//        assertThrows(IllegalArgumentException.class, ()->
-//                tennisRacquet1.setQuantityInStock(-1));
-//    }
-//
-//    @Test
-//    void setIIQuantitySold() {
-//        tennisRacquet1.setQuantitySold(5);
-//        assertEquals(15, tennisRacquet1.getQuantityInStock());
-//        assertEquals(5, tennisRacquet1.getQuantitySold());
-//    }
-//
-//    @Test
-//    void setIIQuantitySoldAsAReturn() {
-//        tennisRacquet1.setQuantitySold(5);
-//        tennisRacquet1.setQuantitySold(-3);  //customer returns 3
-//        assertEquals(18, tennisRacquet1.getQuantityInStock());
-//        assertEquals(2, tennisRacquet1.getQuantitySold());
-//    }
-//
-//    @Test
-//    void setIIQuantitySoldNotEnoughInventory() {
-//        assertThrows(IllegalArgumentException.class, ()->
-//                tennisRacquet1.setQuantitySold(30));
-//    }
-//
-//    @Test
-//    void setIIPurchasePriceConstructor() {
-//        assertEquals(21.87, tennisRacquet1.getPurchasePrice());
-//    }
-//
-//    @Test
-//    void setIIPurchasePrice() {
-//        tennisRacquet1.setPurchasePrice(34.44);
-//        assertEquals(34.44, tennisRacquet1.getPurchasePrice());
-//    }
-//
-//    @Test
-//    void setIIPurchasePriceInvalidConstructor() {
-//        assertThrows(IllegalArgumentException.class, ()->
-//                new TennisRacquet("Head","Challenge Lite",240,"midsize",-0.01,89.99,20));
-//    }
-//
-//    @Test
-//    void setIIPurchasePriceInvalid() {
-//        assertThrows(IllegalArgumentException.class, ()->
-//                tennisRacquet1.setPurchasePrice(-0.01));
-//    }
-//
-//    @Test
-//    void setIISellingPriceConstructor() {
-//        assertEquals(89.99, tennisRacquet1.getSellingPrice());
-//    }
-//
-//    @Test
-//    void setIISellingPrice() {
-//        tennisRacquet1.setSellingPrice(100.00);
-//        assertEquals(100.00, tennisRacquet1.getSellingPrice());
-//    }
-//
-//    @Test
-//    void setIISellingPriceInvalidConstructor() {
-//        assertThrows(IllegalArgumentException.class, ()->
-//                new TennisRacquet("Head","Challenge Lite",240,"midsize",100.00,89.99,20));
-//    }
-//
-//    @Test
-//    void setIISellingPriceInvalid() {
-//        assertThrows(IllegalArgumentException.class, ()->
-//                tennisRacquet1.setSellingPrice(20));
-//    }
-//
-//    @Test
-//    void setIIgetProfit() {
-//        tennisRacquet1.setQuantitySold(5);
-//        //quantity sold * (sellingPrice - purchasePrice) = 5*(89.99-21.87)=340.60
-//        assertEquals(340.60, tennisRacquet1.getProfit(), 0.001);
-//    }
+    @Test
+    void setTRSuperClass() {
+        assertTrue(tennisRacquet1 instanceof InventoryItem);
+    }
+
+    @Test
+    void setIIQuantityInStockConstructor() {
+        assertEquals(20, tennisRacquet1.getQuantityInStock());
+    }
+
+    @Test
+    void setIIQuantityInStock() {
+        tennisRacquet1.setQuantityInStock(30);
+        assertEquals(30, tennisRacquet1.getQuantityInStock());
+    }
+
+    @Test
+    void setIIQuantityInStockInvalidLowConstructor() {
+        assertThrows(IllegalArgumentException.class, ()->
+                new TennisRacquet("Head","Challenge Lite",239,"midsize",21.87,89.99,-1));
+    }
+
+    @Test
+    void setIIQuantityInStockInvalidLow() {
+        assertThrows(IllegalArgumentException.class, ()->
+                tennisRacquet1.setQuantityInStock(-1));
+    }
+
+    @Test
+    void setIIQuantitySold() {
+        tennisRacquet1.setQuantitySold(5);
+        assertEquals(15, tennisRacquet1.getQuantityInStock());
+        assertEquals(5, tennisRacquet1.getQuantitySold());
+    }
+
+    @Test
+    void setIIQuantitySoldAsAReturn() {
+        tennisRacquet1.setQuantitySold(5);
+        tennisRacquet1.setQuantitySold(-3);  //customer returns 3
+        assertEquals(18, tennisRacquet1.getQuantityInStock());
+        assertEquals(2, tennisRacquet1.getQuantitySold());
+    }
+
+    @Test
+    void setIIQuantitySoldNotEnoughInventory() {
+        assertThrows(IllegalArgumentException.class, ()->
+                tennisRacquet1.setQuantitySold(30));
+    }
+
+    @Test
+    void setIIPurchasePriceConstructor() {
+        assertEquals(21.87, tennisRacquet1.getPurchasePrice());
+    }
+
+    @Test
+    void setIIPurchasePrice() {
+        tennisRacquet1.setPurchasePrice(34.44);
+        assertEquals(34.44, tennisRacquet1.getPurchasePrice());
+    }
+
+    @Test
+    void setIIPurchasePriceInvalidConstructor() {
+        assertThrows(IllegalArgumentException.class, ()->
+                new TennisRacquet("Head","Challenge Lite",240,"midsize",-0.01,89.99,20));
+    }
+
+    @Test
+    void setIIPurchasePriceInvalid() {
+        assertThrows(IllegalArgumentException.class, ()->
+                tennisRacquet1.setPurchasePrice(-0.01));
+    }
+
+    @Test
+    void setIISellingPriceConstructor() {
+        assertEquals(89.99, tennisRacquet1.getSellingPrice());
+    }
+
+    @Test
+    void setIISellingPrice() {
+        tennisRacquet1.setSellingPrice(100.00);
+        assertEquals(100.00, tennisRacquet1.getSellingPrice());
+    }
+
+    @Test
+    void setIISellingPriceInvalidConstructor() {
+        assertThrows(IllegalArgumentException.class, ()->
+                new TennisRacquet("Head","Challenge Lite",240,"midsize",100.00,89.99,20));
+    }
+
+    @Test
+    void setIISellingPriceInvalid() {
+        assertThrows(IllegalArgumentException.class, ()->
+                tennisRacquet1.setSellingPrice(20));
+    }
+
+    @Test
+    void setIIgetProfit() {
+        tennisRacquet1.setQuantitySold(5);
+        //quantity sold * (sellingPrice - purchasePrice) = 5*(89.99-21.87)=340.60
+        assertEquals(340.60, tennisRacquet1.getProfit(), 0.001);
+    }
 
 
 
