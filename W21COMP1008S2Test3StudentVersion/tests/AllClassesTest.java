@@ -26,12 +26,12 @@ class AllClassesTest {
         skis3 = new Skis("Volkl","RaceTiger SC Yellow",160,389.99,1099.76,4);
 
         inventory = new ArrayList<>();
-//        inventory.add(tennisRacquet1);
-//        inventory.add(tennisRacquet2);
-//        inventory.add(tennisRacquet3);
-//        inventory.add(skis1);
-//        inventory.add(skis2);
-//        inventory.add(skis3);
+        inventory.add(tennisRacquet1);
+        inventory.add(tennisRacquet2);
+        inventory.add(tennisRacquet3);
+        inventory.add(skis1);
+        inventory.add(skis2);
+        inventory.add(skis3);
 
         store = new SportStore("123 Happy St", inventory);
     }
@@ -415,30 +415,30 @@ class AllClassesTest {
                 new SportStore("  1    ", inventory));
     }
 
-//    @Test
-//    void sellItem() {
-//        store.sellItem(tennisRacquet1, 7);
-//        assertEquals(13, tennisRacquet1.getQuantityInStock());
-//    }
-//
-//    @Test
-//    void calculateProfit1()
-//    {
-//        store.sellItem(tennisRacquet1, 7);
-//        //calculation for TR   = 7 * (89.99-21.87) = 476.84
-//        assertEquals(476.84, store.calculateProfit(), 0.001);
-//    }
-//
-//
-//    @Test
-//    void calculateProfit2()
-//    {
-//        store.sellItem(tennisRacquet1, 7);
-//        store.sellItem(skis1, 2);
-//        //calculation for TR   = 7 * (89.99-21.87) = 476.84
-//        //calculation for skis = 2 * (899.76-310) = 1179.52
-//        //total = 1656.36
-//        assertEquals(1656.36, store.calculateProfit(), 0.001);
-//    }
+    @Test
+    void sellItem() {
+        store.sellItem(tennisRacquet1, 7);
+        assertEquals(13, tennisRacquet1.getQuantityInStock());
+    }
+
+    @Test
+    void calculateProfit1()
+    {
+        store.sellItem(tennisRacquet1, 7);
+        //calculation for TR   = 7 * (89.99-21.87) = 476.84
+        assertEquals(476.84, store.calculateProfit(), 0.001);
+    }
+
+
+    @Test
+    void calculateProfit2()
+    {
+        store.sellItem(tennisRacquet1, 7);
+        store.sellItem(skis1, 2);
+        //calculation for TR   = 7 * (89.99-21.87) = 476.84
+        //calculation for skis = 2 * (899.76-310) = 1179.52
+        //total = 1656.36
+        assertEquals(1656.36, store.calculateProfit(), 0.001);
+    }
 
 }
