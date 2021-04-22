@@ -39,7 +39,7 @@ public abstract class InventoryItem {
             this.quantitySold =  this.quantitySold + quantitySold;
         }
         else
-            throw new IllegalArgumentException("The quantity sold can not be less than the quantity in stock !");
+            throw new IllegalArgumentException("The quantity sold can not be greater than the quantity in stock !");
     }
 
     public double getPurchasePrice() {
@@ -47,6 +47,11 @@ public abstract class InventoryItem {
     }
 
     public void setPurchasePrice(double purchasePrice) {
+        if (purchasePrice >=0){
+            this.purchasePrice = purchasePrice;
+        }
+        else
+            throw new IllegalArgumentException("The purchase price should be equal or greater than 0!");
     }
 
     public double getSellingPrice() {
@@ -54,6 +59,12 @@ public abstract class InventoryItem {
     }
 
     public void setSellingPrice(double sellingPrice) {
+        if (sellingPrice > purchasePrice){
+            this.sellingPrice = sellingPrice;
+        }
+        else{
+            throw new IllegalArgumentException("The selling price must be greater than the purchase price!");
+        }
     }
 
     public double getProfit()
